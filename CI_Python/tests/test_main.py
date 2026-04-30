@@ -30,3 +30,13 @@ class TestCalculatorFunctions(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+import unittest
+from CI_Python.calculator import add, subtract, multiply, divide, multiply_list
+
+
+
+class TestCalculator(unittest.TestCase):
+    def test_multiply_list(self):
+        self.assertEqual(multiply_list([1, 2, 3]), 6)
+        self.assertEqual(multiply_list([2, 2, 2]), 8)
